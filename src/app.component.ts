@@ -46,7 +46,7 @@ import {RandomDataService} from './randomData/randomData.service';
       margin-right: -4px;
     }
 
-    /deep/ od-virtual-row {
+    /deep/ od-virtualrow {
       width: 100%;
     }
 
@@ -63,7 +63,7 @@ import {RandomDataService} from './randomData/randomData.service';
   template: `
     <div class="container">
       <h1>od-virtualscroll</h1>
-      <od-virtual-scroll class="tiles-container" [vsData]="data$" [vsOptions]="options$">
+      <od-virtualscroll class="tiles-container" [vsData]="data$" [vsOptions]="options$">
         <ng-template let-item let-row="row">
           <div class="tile">
             <img class="contact-img" [src]="item.picture.thumbnail">
@@ -74,7 +74,7 @@ import {RandomDataService} from './randomData/randomData.service';
             </div>
           </div>
         </ng-template>
-      </od-virtual-scroll>
+      </od-virtualscroll>
     <div>`
 })
 export class AppComponent {
