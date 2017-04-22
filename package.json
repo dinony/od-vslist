@@ -1,6 +1,6 @@
 {
   "name": "od-vslist",
-  "description": "od-virtualscroll - list example",
+  "description": "od-virtualscroll: list example",
   "homepage": "https://dinony.github.io/od-vslist/",
   "scripts": {
     "build": "ngc -p tsconfig-aot.json && rollup -c rollup.config.js",
