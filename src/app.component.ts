@@ -11,55 +11,7 @@ import {RandomDataService} from './randomData/randomData.service';
 
 @Component({
   selector: 'app-shell',
-  styles: [`
-    .container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      margin: 0 auto;
-      width: 70%;
-    }
-
-    h1 {
-      color: pink;
-    }
-
-    .tiles-container {
-      border: 4px solid pink;
-      border-radius: 4px;
-      box-sizing: border-box;
-      min-width: 202px;
-      width: 100%;
-      height: 85%;
-    }
-
-    .tile {
-      align-items: center;
-      background-color: pink;
-      border-bottom: 4px solid white;
-      box-sizing: border-box;
-      color: white;
-      display: inline-flex;
-      height: 100px;
-      overflow-x: scroll;
-      width: 100%;
-      margin-right: -4px;
-    }
-
-    /deep/ od-virtualrow {
-      width: 100%;
-    }
-
-    .contact-img {
-      border-radius: 100%;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-    .contact {
-      display: inline-block;
-    }
-  `],
+  styleUrls: ['src/app.component.css'],
   template: `
     <div class="container">
       <h1>od-virtualscroll</h1>
