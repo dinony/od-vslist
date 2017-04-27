@@ -15,9 +15,9 @@ import {RandomDataService} from './randomData/randomData.service';
   template: `
     <div class="container">
       <h1>od-virtualscroll</h1>
-      <od-virtualscroll class="tiles-container" [vsData]="data$" [vsOptions]="options$">
+      <od-virtualscroll class="cells-container" [vsData]="data$" [vsOptions]="options$">
         <ng-template let-item let-row="row">
-          <div class="tile">
+          <div class="cell">
             <img class="contact-img" [src]="item.picture.thumbnail">
             <div class="contact">
               <div>Contact {{row+1}}: <strong>{{item.name.first}} {{item.name.last}}</strong></div>

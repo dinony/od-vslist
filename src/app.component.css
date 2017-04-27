@@ -10,7 +10,7 @@ h1 {
   color: pink;
 }
 
-.tiles-container {
+.cells-container {
   border: 4px solid pink;
   border-radius: 4px;
   box-sizing: border-box;
@@ -19,7 +19,7 @@ h1 {
   height: 90vh;
 }
 
-.tile {
+.cell {
   align-items: center;
   background-color: pink;
   border-bottom: 4px solid white;
