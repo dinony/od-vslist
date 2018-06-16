@@ -30,14 +30,29 @@ SystemJS.config({
     src: {
       main: 'main.ts',
       defaultExtension: 'ts',
-      meta: {'*.ts': {loader:'ts'}}  
+      meta: {'*.ts': {loader:'ts'}}
     },
-    rxjs: {
-      defaultExtension: 'js'
-    }
+    rxjs: {main: 'index.js', defaultExtension: 'js' },
+    'rxjs/operators': {main: 'index.js', defaultExtension: 'js' }
   },
   transpiler: 'ts',
   typescriptOptions: {
-    tsconfig: '../../../tsconfig.json'
+    "target": "es5",
+    "module": "System",
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": false,
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "stripInternal": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true
   }
 });
