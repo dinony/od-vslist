@@ -64,5 +64,5 @@
     "tslint": "^5.10.0",
     "typescript": "~2.7.2"
   },
-  "version": "1.0.9"
+  "version": "1.1.0"
 }
