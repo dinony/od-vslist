@@ -1,11 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 
-import {Observable} from 'rxjs/Observable';
+import {Observable, throwError} from 'rxjs';
 
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import {map, catchError} from 'rxjs/operators';
 
 @Injectable()
 export class RandomDataService {
@@ -27,8 +25,8 @@ export class RandomDataService {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
-    return Observable.throw(errMsg);
+    return throwError(errMsg);
   }
 
-  users = (results=10, page=0, seed='abc', inc='name,email,phone,picture') => this._http.get(`${this._apiUrl}/?page=${page}&results=${results}&seed=${seed}&inc=${inc}&lego`).map(this._getData).catch(this._handleError);
+  users = (results=10, page=0, seed='abc', inc='name,email,phone,picture') => this._http.get(`${this._apiUrl}/?page=${page}&results=${results}&seed=${seed}&inc=${inc}&lego`).pipe(map(this._getData), catchError(this._handleError));
 }
