@@ -19,7 +19,6 @@
   },
   "include": ["tmpBuild/app.module.ts", "tmpBuild/main-aot.ts"],
   "angularCompilerOptions": {
-    "genDir": "aot",
     "skipMetadataEmit" : true
   }
 }
